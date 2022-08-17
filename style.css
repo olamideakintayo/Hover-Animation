@@ -1,0 +1,51 @@
+body {
+   background-color: #f9c6d7;
+   text-align: center;
+}
+/* For the text in the page */
+.letter {
+    font-size: 90px;
+    font-family: cursive;
+    display: inline-block;
+    color: #999;
+    transition: all 250ms ease-in-out;
+   
+}
+/* When you hover on the letters it changes color */
+.letter.active {
+   transform: scale(1.5) rotate(20deg);
+   color: green;
+}
+
+/* For the Css Animation ball */
+  .ball {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #FF5722;
+    margin-left: 650px;
+  
+    animation: bounce 0.5s;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.5,0.05,1,.5);
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes bounce {
+    from { transform: translate3d(0, 0, 0);     }
+    to   { transform: translate3d(0, 200px, 0); }
+  }
+  
+  /* Prefix Support */
+  ball {
+    -webkit-animation-name: bounce;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-timing-function: cubic-bezier(.5,0.05,1,.5);
+    -webkit-animation-iteration-count: infinite;
+  }
+  
+  @-webkit-keyframes bounce {
+    from { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+    to   { -webkit-transform: translate3d(0, 200px, 0); transform: translate3d(0, 200px, 0); }
+  }
